@@ -5,23 +5,23 @@ int main (){
 	int d, e, MEN=0;
 	
 	for (d=0; d<7; d++){
-		cout<<"Ingrese min "<<d+1<<": "; cin>>td1[d];
-		cout<<"Ingrese max "<<d+1<<": "; cin>>td2[d];
+		cout<<"Ingrese temperatura minima del dia "<<d+1<<": "; cin>>td1[d];
+		cout<<"Ingrese temperatura maxima del dia "<<d+1<<": "; cin>>td2[d];
 	}
 	
 	system("cls");
 	for (e=0; e<7; e++){
 		tdp[e] = (td1[e] + td2[e])/2;
-		cout<<"Temperatura media de "<<e+1<<" es "<<tdp[e]<<endl;
+		cout<<"La temperatura media del dia "<<e+1<<" es "<<tdp[e]<<" grados."<<endl;
 		
 		if (td1[MEN] > td1[e]){
 			MEN=e;
 		}
 	}
-	cout<<"Dia menor temperatura es "<<MEN+1<<" con "<<td1[MEN]<<endl;
+	cout<<endl<<"El dia "<<MEN+1<<" tuvo la menor temperatura, con "<<td1[MEN]<<" grados."<<endl<<endl;
 	
 	bool g=false;
-	cout<<"Ingrese temperatura max a comparar: "; cin>>tmax;
+	cout<<"Ingrese temperatura maxima a comparar: "; cin>>tmax;
 	cout<<"Los dias con igual temperatura son: "<<endl;
 	for (int f=0; f<7; f++){
 		if (tmax==td2[f]){
@@ -30,7 +30,7 @@ int main (){
 		}
 	}
 	if (g==false){
-		cout<<"Ningun dia coincide.";
+		cout<<"Ningun dia coincide."<<endl;
 	}
 	
 	return 0;
