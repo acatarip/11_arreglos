@@ -1,3 +1,5 @@
+// Programa que pide n numeros, los guarda en un arreglo,
+// escribe la sumatoria de numeros y escribe el porcentaje de ceros
 #include <iostream>
 using namespace std;
 int main (){
